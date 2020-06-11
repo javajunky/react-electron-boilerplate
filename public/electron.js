@@ -1,16 +1,14 @@
 const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow } = require('electron');
 const path = require("path");
 const isDev = require("electron-is-dev");
 let mainWindow;
 function createWindow() {
-    mainWindow = new BrowserWindow({ 
-        width: 1200, 
-        height: 800,
-        icon: ""
+    mainWindow = new BrowserWindow({
+        width: 1200,
+        height: 800
     });
-     
+
 
     mainWindow.loadURL(
         isDev
